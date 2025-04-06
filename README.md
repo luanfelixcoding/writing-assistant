@@ -30,14 +30,13 @@ writing-assistant/
 Make sure you have the following installed on your system:
 
 ### Ollama & Mistral 7B Instruct
-
+  - Install Ollama: https://github.com/ollama/ollama
+  - Install the required model locally:
+    ```bash
+    ollama run mistral:7b-instruct-v0.2-q4_K_S
 - Python 3.x
 - Required libraries: `pynput`, `pyperclip`, `httpx`. 
-- Install Ollama: https://github.com/ollama/ollama
-- Install the required model locally:
   
-  ```bash
-  ollama run mistral:7b-instruct-v0.2-q4_K_S
 
 ---
 
