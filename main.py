@@ -11,7 +11,16 @@ def fix_text(text: str) -> str:
 
 
 def fix_current_line():
-    ...
+    # Ctrl + Shift + Left
+    controller.press(Key.ctrl)
+    controller.press(Key.shift)
+    controller.press(Key.left)
+
+    controller.release(Key.ctrl)
+    controller.release(Key.shift)
+    controller.release(Key.left)
+
+    fix_selection()
 
 
 def fix_selection():
