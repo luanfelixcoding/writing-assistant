@@ -1,6 +1,6 @@
 # Real-time writing-assistant with Ollama Mistral 7B
 
-This Python project allows you to correct typos, punctuation, and casing of selected or current-line text using a hotkey trigger. It leverages the locally installed [Mistral 7B Instruct model](https://ollama.com/library/mistral:7b-instruct-v0.2-q4_K_S) via [Ollama](https://github.com/ollama/ollama).
+This Python project allows you to correct typos, punctuation, and casing of selected or current-line text using a hotkey trigger. It leverages the locally installed [Mistral 7B Instruct model](https://ollama.com/library/mistral:7b-instruct-v0.3-q4_K_S) via [Ollama](https://github.com/ollama/ollama).
 
 ## Features
 
@@ -33,7 +33,7 @@ Make sure you have the following installed on your system:
   - Install Ollama: https://github.com/ollama/ollama
   - Install the required model locally:
     ```bash
-    ollama run mistral:7b-instruct-v0.2-q4_K_S
+    ollama run mistral:7b-instruct-v0.3-q4_K_S
 - Python 3.x
 - Required libraries: `pynput`, `pyperclip`, `httpx`. 
   
