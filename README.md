@@ -11,7 +11,15 @@ This Python project allows you to correct typos, punctuation, and casing of sele
   - `F10`: Fix **selected text**.
 - Sends selected text to a **locally running** Mistral model via Ollama.
 - Automatically pastes the corrected result back in place.
-
+- If you want to change to *English*, change the **PROMPT_TEMPLATE** to:
+    ```bash
+    PROMPT_TEMPLATE = Template(
+        Fix all typos and casing and punctuation in this text, but preserve all new line characters:
+    
+        $text
+    
+        Return only the corrected text, don't include a preamble.
+    )
 ---
 
 ## Project Structure
@@ -62,4 +70,3 @@ Make sure you have the following installed on your system:
 5. **Run the Program**:
     ```bash
     python main.py
-    

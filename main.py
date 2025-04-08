@@ -15,11 +15,11 @@ OLLAMA_CONFIG = {"model": "mistral:7b-instruct-v0.3-q4_K_S",
                  }
 
 PROMPT_TEMPLATE = Template(
-    """Fix all typos and casing and punctuation in this text, but preserve all new line characters:
-    
+    """Corrija todos os erros de ortografia, pontuação e capitalização no texto abaixo, mantendo as quebras de linha.
+
     $text
-    
-    Return only the corrected text, don't include a preamble.
+
+    Retorne apenas o texto corrigido, sem explicações ou comentários.
     """
 )
 
@@ -29,7 +29,7 @@ def fix_text(text: str) -> str:
     response = httpx.post(OLLAMA_ENDPOINT,
                           json={"prompt": prompt, **OLLAMA_CONFIG},
                           headers={"Content-Type": "application/json"},
-                          timeout=20)
+                          timeout=30)
     if response.status_code != 200:
         return None
     return response.json()["response"].strip()
