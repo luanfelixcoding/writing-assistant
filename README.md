@@ -14,11 +14,12 @@ This Python project allows you to correct typos, punctuation, and casing of sele
 - If you want to change to *English*, change the **PROMPT_TEMPLATE** to:
     ```bash
     PROMPT_TEMPLATE = Template(
-        Fix all typos and casing and punctuation in this text, but preserve all new line characters:
+        """Fix all typos and casing and punctuation in this text, but preserve all new line characters:
     
         $text
     
         Return only the corrected text, don't include a preamble.
+        """
     )
 ---
 
